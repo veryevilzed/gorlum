@@ -34,7 +34,7 @@ func main() {
 
     for line := range t.Lines {
         log.Printf("%s", line.Text)
-        _, err := c.Write([]byte(line.Text))
+        _, err := c.Write([]byte(line.Text+"\n"))
         if err != nil {
             log.Fatal("write error:", err)
             break
